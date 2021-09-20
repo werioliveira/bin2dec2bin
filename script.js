@@ -11,10 +11,10 @@ const addElement = (event) => {
     event.target.elements[0].value = '' //clear input after submit
     let convertedValue = 0 //change binary to decimal
 
-    if(!isNumeric(inputValue)){
+    if(!isNumeric(inputValue)){ //check if have string
         return
     }
-    if(selectInput == 'Binario para Decimal'){
+    if(selectInput == 'Binario para Decimal'){ //check options of conversion
         convertedValue = parseInt(inputValue,2)
     }else if(selectInput == 'Decimal para Binario'){
         convertedValue = (+inputValue).toString(2)
